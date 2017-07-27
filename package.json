@@ -11,13 +11,11 @@
     "js:build": "babel script.js --out-file script-compiled.js"
   },
   "devDependencies": {
-    "autoprefixer": "^6.7.7",
-    "babel-cli": "^6.24.0",
+    "autoprefixer": "^7.1.2",
+    "babel-cli": "^6.24.1",
     "babel-preset-env": "^1.6.0",
-    "node-sass": "^4.5.2",
-    "postcss-cli": "^3.0.0"
-  },
-  "dependencies": {
-    "browser-sync": "^2.18.13"
+    "browser-sync": "^2.18.13",
+    "node-sass": "^4.5.3",
+    "postcss-cli": "^4.1.0"
   }
 }
