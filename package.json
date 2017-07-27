@@ -1,0 +1,23 @@
+{
+  "scripts": {
+    "sync": "browser-sync start --server --host 192.168.1.220 --files \"**/*[.html|.css|.js]\"",
+    "watch": "npm run css:watch",
+    "build": "npm run css:build && npm run js:build",
+    "css:watch": "npm run sass:build && npm run sass:watch",
+    "css:build": "npm run sass:build && npm run css:autoprefixer",
+    "css:autoprefixer": "postcss style.css --use autoprefixer --replace --no-map",
+    "sass:watch": "node-sass css/index.scss style.css --source-map-embed --watch",
+    "sass:build": "node-sass css/index.scss style.css --output-style compressed",
+    "js:build": "babel script.js --out-file script-compiled.js"
+  },
+  "devDependencies": {
+    "autoprefixer": "^6.7.7",
+    "babel-cli": "^6.24.0",
+    "babel-preset-env": "^1.6.0",
+    "node-sass": "^4.5.2",
+    "postcss-cli": "^3.0.0"
+  },
+  "dependencies": {
+    "browser-sync": "^2.18.13"
+  }
+}
