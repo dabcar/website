@@ -1,0 +1,36 @@
+.o-section {
+  min-height: calc(100vh - #{$navbar-height});
+  @include min(laptopS) {
+    min-height: 100vh;
+  }
+  padding: ($space--y * 2) 7%;
+  background-color: $lightest;
+}
+
+.o-grid {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: -$gutter;
+  margin-left: -$gutter;
+}
+
+.o-grid > * {
+  flex-basis: 100%;
+  margin-top: $gutter;
+  margin-left: $gutter;
+}
+
+.o-grid--2 > * {
+  @include min(tabletS) {
+    flex: 1 calc((100% - 2 * #{$gutter}) / 2);
+  }
+}
+
+.o-grid--3 > * {
+  @include min(mobileL) {
+    flex: 1 calc((100% - 2 * #{$gutter}) / 2);
+  }
+  @include min(tabletS) {
+    flex: 1 calc((100% - 3 * #{$gutter}) / 3);
+  }
+}

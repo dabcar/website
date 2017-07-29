@@ -1,0 +1,15 @@
+body {
+  display: flex;
+  font-family: Montserrat, sans-serif;
+  overflow-x: hidden;
+}
+
+main {
+  flex: 1;
+  padding-top: $navbar-height;
+
+  @include min(laptopS) {
+    padding-top: 0;
+    padding-left: $sidebar-width;
+  }
+}

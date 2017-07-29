@@ -1,0 +1,43 @@
+@function rem($px) {
+  @return ($px / 16px) * 1rem;
+}
+
+@function em($px, $base: 16px) {
+  @return ($px / $base) * 1em;
+}
+
+$sizes: (
+  mobileS: 1px,
+  mobileM: 340px,
+  mobileL: 425px,
+  tabletS: 600px,
+  tabletM: 768px,
+  tabletL: 900px,
+  laptopS: 1024px,
+  laptopM: 1366px,
+  laptopL: 1440px
+);
+
+@mixin min($value) {
+  @if map-has-key($sizes, $value) {
+    @media (min-width: #{em(map-get($sizes, $value))}) {
+      @content;
+    }
+  } @else {
+    @media (min-width: em($value)) {
+      @content;
+    }
+  }
+}
+$global-inset: rem(20px);
+$gutter: $global-inset;
+$space--x: rem(35px);
+$space--y: rem(35px);
+$navbar-height: rem(70px);
+$sidebar-width: rem(320px);
+$primary: #137f40;
+$dark: #111;
+$light: #efefef;
+$lightest: #f9f9f9;
+$text-color: #767676;
+$text-color--dark: #333;

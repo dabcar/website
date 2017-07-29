@@ -1,0 +1,17 @@
+.c-btn {
+  display: inline-block;
+  padding: em(18px) em(34px);
+  font-weight: 700;
+  font-size: rem(16px);
+  border-radius: $border-radius;
+}
+
+.c-btn.\--white {
+  background-color: #fff;
+  color: #111;
+}
+
+.c-btn.\--primary {
+  color: #fff;
+  background-color: $primary;
+}

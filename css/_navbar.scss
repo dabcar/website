@@ -1,0 +1,64 @@
+.navbar {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  height: $navbar-height;
+  position: fixed;
+  z-index: 2;
+  top: 0;
+  left: 0;
+  background-color: #fff;
+  box-shadow: 0 0 20px rgba(0, 0, 0, .2);
+  will-change: transform;
+
+  @include min(laptopS) {
+    display: none;
+  }
+}
+
+.navbar__logo {
+  height: 65%;
+  margin: 0 auto;
+}
+
+.navbar__btn {
+  align-self: stretch;
+  width: 35px;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 7%;
+  padding: 0;
+  background: none;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.navbar__btn__line {
+  height: 2px;
+  width: 100%;
+  position: absolute;
+  top: 50%;
+  left: 0;
+  margin-top: -1px;
+  background: #111;
+  will-change: transform;
+}
+
+.navbar__btn__line--top {
+  transform: translateY(-4px);
+}
+
+.navbar__btn__line--bottom {
+  transform: translateY(4px);
+}
+
+.navbar__btn.is-active .navbar__btn__line--top {
+  transform: rotate(-45deg);
+}
+
+.navbar__btn.is-active .navbar__btn__line--bottom {
+  transform: rotate(45deg);
+}

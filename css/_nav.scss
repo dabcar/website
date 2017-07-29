@@ -1,0 +1,68 @@
+.c-nav {
+  box-sizing: border-box;
+  max-height: calc(100vh - #{$navbar-height} - #{$space} * 2);
+  position: absolute;
+  z-index: 1;
+  top: calc(100% + #{$space});
+  right: 0;
+  padding: em(15px) 0;
+  font-size: rem(16px);
+  color: #fff;
+  background-color: #fff;
+  box-shadow: 0 0 20px rgba(0, 0, 0, .2);
+  border-radius: $border-radius;
+  visibility: hidden;
+  opacity: 0;
+  transform-origin: right top;
+  transform: translateY(#{em(-60px)}) scale(.5, .15);
+  transition: .3s cubic-bezier(.5, .5, .1, 1.4);
+  overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
+
+ @include min(700px) {
+    display: flex;
+    position: static;
+    margin-right: em(-15px);
+    padding: 0;
+    background-color: transparent;
+    box-shadow: none;
+    transform: none;
+    visibility: visible;
+    opacity: 1;
+  }
+
+  .c-navbar__btn.is-open + & {
+    transform: none;
+    visibility: visible;
+    opacity: 1;
+  }
+}
+
+.c-nav li {
+  display: flex;
+}
+
+.c-nav a {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  padding: em(15px) em(30px);
+  font-weight: 700;
+  text-transform: uppercase;
+  color: #bbb;
+  transition-duration: .15s;
+  outline: none;
+
+ @include min(700px) {
+    padding: 0 em(15px);
+  }
+
+  &:hover {
+    color: #666;
+  }
+
+  &:focus,
+  &.is-active {
+    color: $primary;
+  }
+}

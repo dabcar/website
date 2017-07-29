@@ -1,0 +1,135 @@
+.is-animatable {
+  transition: 0.25s;
+}
+
+.is-animatable--slow {
+  transition: 0.5s;
+}
+
+.sidebar {
+  height: 100vh;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+
+  &__backdrop {
+    width: 100vw;
+    height: 100vh;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: black;
+    opacity: 0;
+    -webkit-tap-highlight-color: transparent;
+    will-change: opacity;
+    pointer-events: none;
+
+    &.is-visible {
+      opacity: 0.6;
+      pointer-events: all;
+    }
+  }
+
+  &__container {
+    display: flex;
+    flex-direction: column;
+    width: $sidebar-width;
+    max-width: calc(100vw - 30px);
+    height: 100vh;
+    position: absolute;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    padding-top: $navbar-height;
+    @include min(laptopS) {
+      padding-top: 0;
+    }
+    background: #fff;
+    transform: translate(-100%);
+    will-change: transform;
+    overflow-x: hidden;
+    overflow-y: auto;
+
+    @include min(laptopS) {
+      transform: none;
+    }
+
+    &.is-opened {
+      transform: none;
+    }
+  }
+
+  &__nav {
+    flex: 1;
+    display: flex;
+    padding: $space--y 0;
+  }
+
+  &__nav-list {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+
+    &__item {
+      display: flex;
+      flex: 1;
+
+      &--logo {
+        padding-bottom: $space--y;
+      }
+    }
+
+    &__link {
+      display: flex;
+      align-items: center;
+      width: 100%;
+      min-height: 35px;
+      padding: 0 $space--x;
+      color: #888;
+      transition: .2s;
+
+      &:not(.logo):hover {
+        background-color: $light;
+      }
+
+      &.is-active {
+        font-weight: 600;
+        color: #777;
+      }
+    }
+  }
+
+  &__logo {
+    display: none;
+    @include min(laptopS) {
+      display: block;
+    }
+  }
+
+  &__contact {
+    width: 100%;
+    padding: ($space--y * .75) 0;
+    background-color: $dark;
+  }
+
+  &__contact-item {
+    display: block;
+    padding: ($space--y * .25) $space--x;
+    font-weight: 600;
+    color: #fff;
+    transition: .2s;
+
+    &:not(.logo):hover {
+      background-color: lighten($dark, 8%);
+    }
+
+    &--light {
+      font-weight: 300;
+    }
+
+    & + & {
+      margin-top: $space--x * .5;
+    }
+  }
+}

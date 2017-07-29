@@ -1,0 +1,16 @@
+.logo {
+  display: block;
+  transform-origin: left center;
+  transition: opacity .2s;
+
+  &__text {
+    position: absolute;
+    visibility: hidden;
+  }
+
+  &__img {
+    display: block;
+    width: rem(200px);
+    max-height: 100%;
+  }
+}
