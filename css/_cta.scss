@@ -1,0 +1,36 @@
+.cta {
+  display: flex;
+  flex-direction: column;
+  @include min(tabletS) {
+    flex-direction: row;
+  }
+  align-items: baseline;
+  padding: $space--y 7%;
+  background-color: #eee;
+}
+
+.cta__link {
+  transition: .2s;
+
+  @include min(tabletS) {
+    margin-left: auto;
+  }
+
+  &:hover,
+  &:hover .typo__h1 {
+    color: $text-color--dark;
+  }
+}
+
+.cta__link-label {
+  display: none;
+
+  @include min(tabletS) {
+    display: inline;
+  }
+}
+
+.cta__link .typo__h1 {
+  color: $text-color;
+  transition: .2s;
+}

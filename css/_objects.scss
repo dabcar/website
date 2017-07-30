@@ -1,10 +1,19 @@
+.o-container {
+  padding-right: 7%;
+  padding-left: 7%;
+}
+
 .o-section {
   min-height: calc(100vh - #{$navbar-height});
   @include min(laptopS) {
     min-height: 100vh;
   }
-  padding: ($space--y * 2) 7%;
   background-color: $lightest;
+}
+
+.o-section__content {
+  padding-top: $space--y;
+  padding-bottom: $space--y;
 }
 
 .o-grid {
@@ -20,6 +29,17 @@
   margin-left: $gutter;
 }
 
+.o-grid-gutters--30 {
+  margin-top: rem(-30px);
+  margin-left: rem(-30px);
+
+  > * {
+    flex-basis: 100%;
+    margin-top: rem(30px);
+    margin-left: rem(30px);
+  }
+}
+
 .o-grid--2 > * {
   @include min(tabletS) {
     flex: 1 calc((100% - 2 * #{$gutter}) / 2);
@@ -33,4 +53,17 @@
   @include min(tabletS) {
     flex: 1 calc((100% - 3 * #{$gutter}) / 3);
   }
+}
+
+.u-space--y {
+  margin-top: $space--y;
+  margin-bottom: $space--y;
+}
+
+.u-space--top {
+  margin-top: $space--y;
+}
+
+.u-space--bottom {
+  margin-bottom: $space--y;
 }

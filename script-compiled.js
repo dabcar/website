@@ -8,25 +8,6 @@ var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
-var links = document.querySelectorAll(".js-scroll-to");
-
-links.forEach(function (link) {
-  return link.addEventListener("click", function (e) {
-    var href = this.getAttribute("href");
-
-    if (!href.startsWith("#")) return;
-    e.preventDefault();
-
-    if (href === "#") {
-      scroll({ y: 0, behavior: "smooth" });
-    } else {
-      document.getElementById(href.slice(1)).scrollIntoView({ behavior: "smooth" });
-    }
-
-    history.replaceState(null, null, href);
-  });
-});
-
 function ScrollSpy(wrapper, opt) {
   this.doc = document;
   this.wrapper = typeof wrapper === "string" ? this.doc.querySelector(wrapper) : wrapper;
@@ -153,11 +134,6 @@ ScrollSpy.prototype.markNav = function (elems) {
     }
   }
 };
-
-new ScrollSpy("#js-scrollspy", {
-  nav: "#js-scrollspy a",
-  className: "is-active"
-});
 
 window.$ = document.querySelector.bind(document);
 window.$$ = document.querySelectorAll.bind(document);
@@ -479,15 +455,31 @@ var SideNav = function () {
   return SideNav;
 }();
 
-var sideNav = new SideNav();
+var links = document.querySelectorAll(".js-scroll-to");
 
-// API:
+links.forEach(function (link) {
+  return link.addEventListener("click", function (e) {
+    var href = this.getAttribute("href");
 
-// sideNav.destroy()
-// sideNav.init()
+    if (!href.startsWith("#")) return;
+    e.preventDefault();
 
-// sideNav.open()
-// sideNav.close()
-// sideNav.toggle()
+    if (href === "#") {
+      scroll({ y: 0, behavior: "smooth" });
+    } else {
+      document.getElementById(href.slice(1)).scrollIntoView({ behavior: "smooth" });
+    }
 
-// if (sideNav.opened) {}
+    history.replaceState(null, null, href);
+  });
+});
+
+new ScrollSpy("#js-scrollspy", {
+  nav: "#js-scrollspy a",
+  className: "is-active"
+});
+
+new SideNav();
+
+var cl = cloudinary.Cloudinary.new({ cloud_name: "asista-dabcar" });
+cl.responsive();

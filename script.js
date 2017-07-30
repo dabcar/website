@@ -1,24 +1,3 @@
-const links = document.querySelectorAll(".js-scroll-to")
-
-links.forEach(link =>
-  link.addEventListener("click", function(e) {
-    const href = this.getAttribute("href")
-
-    if (!href.startsWith("#")) return
-    e.preventDefault()
-
-    if (href === "#") {
-      scroll({ y: 0, behavior: "smooth" })
-    } else {
-      document
-        .getElementById(href.slice(1))
-        .scrollIntoView({ behavior: "smooth" })
-    }
-
-    history.replaceState(null, null, href)
-  })
-)
-
 function ScrollSpy(wrapper, opt) {
   this.doc = document
   this.wrapper =
@@ -155,11 +134,6 @@ ScrollSpy.prototype.markNav = function(elems) {
     }
   }
 }
-
-new ScrollSpy("#js-scrollspy", {
-  nav: "#js-scrollspy a",
-  className: "is-active"
-})
 
 window.$ = document.querySelector.bind(document)
 window.$$ = document.querySelectorAll.bind(document)
@@ -445,15 +419,33 @@ class SideNav {
   }
 }
 
-const sideNav = new SideNav()
+const links = document.querySelectorAll(".js-scroll-to")
 
-// API:
+links.forEach(link =>
+  link.addEventListener("click", function(e) {
+    const href = this.getAttribute("href")
 
-// sideNav.destroy()
-// sideNav.init()
+    if (!href.startsWith("#")) return
+    e.preventDefault()
 
-// sideNav.open()
-// sideNav.close()
-// sideNav.toggle()
+    if (href === "#") {
+      scroll({ y: 0, behavior: "smooth" })
+    } else {
+      document
+        .getElementById(href.slice(1))
+        .scrollIntoView({ behavior: "smooth" })
+    }
 
-// if (sideNav.opened) {}
+    history.replaceState(null, null, href)
+  })
+)
+
+new ScrollSpy("#js-scrollspy", {
+  nav: "#js-scrollspy a",
+  className: "is-active"
+})
+
+new SideNav()
+
+const cl = cloudinary.Cloudinary.new({ cloud_name: "asista-dabcar" })
+cl.responsive()

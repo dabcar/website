@@ -63,7 +63,7 @@
   &__nav {
     flex: 1;
     display: flex;
-    padding: $space--y 0;
+    padding: $space 0;
   }
 
   &__nav-list {
@@ -76,7 +76,7 @@
       flex: 1;
 
       &--logo {
-        padding-bottom: $space--y;
+        padding-bottom: $space;
       }
     }
 
@@ -85,7 +85,7 @@
       align-items: center;
       width: 100%;
       min-height: 35px;
-      padding: 0 $space--x;
+      padding: 0 $space;
       color: #888;
       transition: .2s;
 
@@ -109,13 +109,13 @@
 
   &__contact {
     width: 100%;
-    padding: ($space--y * .75) 0;
+    padding: ($space * .75) 0;
     background-color: $dark;
   }
 
   &__contact-item {
     display: block;
-    padding: ($space--y * .25) $space--x;
+    padding: ($space * .25) $space;
     font-weight: 600;
     color: #fff;
     transition: .2s;
@@ -129,7 +129,7 @@
     }
 
     & + & {
-      margin-top: $space--x * .5;
+      margin-top: $space * .5;
     }
   }
 }
