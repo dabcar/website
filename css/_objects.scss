@@ -42,16 +42,16 @@
 
 .o-grid--2 > * {
   @include min(tabletS) {
-    flex: 1 calc((100% - 2 * #{$gutter}) / 2);
+    flex-basis: calc((100% - 2 * #{$gutter}) / 2);
   }
 }
 
 .o-grid--3 > * {
-  @include min(mobileL) {
-    flex: 1 calc((100% - 2 * #{$gutter}) / 2);
-  }
   @include min(tabletS) {
-    flex: 1 calc((100% - 3 * #{$gutter}) / 3);
+    flex-basis: calc((100% - 2 * #{rem(30px)}) / 2);
+  }
+  @include min(tabletL) {
+    flex-basis: calc((100% - 3 * #{rem(30px)}) / 3);
   }
 }
 

@@ -1,0 +1,26 @@
+.destinations {
+  margin-top: 0;
+}
+
+.dest {
+  width: 100%;
+  position: relative;
+}
+
+.dest__img {
+  max-width: 100%;
+  border-radius: 50%;
+}
+
+.dest__caption {
+  position: absolute;
+  top: 65%;
+  left: 0;
+  padding: rem(10px) rem(14px);
+  font-weight: 700;
+  font-size: rem(15px);
+  color: $text-color;
+  background-color: #fff;
+  box-shadow: 0 3px 20px rgba(#000, .15);
+  border-radius: 5px;
+}
