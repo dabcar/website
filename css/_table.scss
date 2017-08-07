@@ -1,0 +1,27 @@
+.table {
+  font-size: rem(16px);
+  line-height: 1.5;
+  color: $text-color;
+  text-align: left;
+  border-collapse: collapse;
+  border-spacing: 0;
+  border: hidden;
+  border-radius: 8px;
+  box-shadow: 0 0 0 1px #ddd;
+}
+
+.table--fixed th,
+.table--fixed td {
+  width: 25%;
+}
+
+.table td,
+.table th {
+  padding: rem(20px);
+  border: 1px solid #ddd;
+}
+
+.table__val {
+  text-align: right;
+  font-weight: 700;
+}

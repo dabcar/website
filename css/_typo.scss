@@ -42,6 +42,29 @@
   color: rgba(#fff, .6);
 }
 
-.t-typo * + *:not(div):not(footer) {
+.t-typo * + *:not(div):not(.o-grid):not(footer) {
   margin-top: rem(25px);
+}
+
+.t-typo * + .o-grid {
+  margin-top: rem(5px);
+}
+
+.t-typo .bold {
+  font-weight: 700;
+}
+
+.checklist > li {
+  display: flex;
+  align-items: center;
+  font-weight: 700;
+  font-size: rem(14px);
+}
+
+.checklist svg {
+  min-width: rem(32px);
+  width: rem(32px);
+  height: rem(32px);
+  margin-right: rem(10px);
+  fill: lighten($text-color, 30%);
 }

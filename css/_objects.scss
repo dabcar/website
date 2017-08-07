@@ -56,14 +56,18 @@
 }
 
 .u-space--y {
-  margin-top: $space--y;
-  margin-bottom: $space--y;
+  margin-top: $space--y !important;
+  margin-bottom: $space--y !important;
 }
 
 .u-space--top {
-  margin-top: $space--y;
+  margin-top: $space--y !important;
 }
 
 .u-space--bottom {
-  margin-bottom: $space--y;
+  margin-bottom: $space--y !important;
+}
+
+.u-align-middle {
+  align-items: center;
 }
