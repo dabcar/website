@@ -481,5 +481,5 @@ new ScrollSpy("#js-scrollspy", {
 
 new SideNav();
 
-var cl = cloudinary.Cloudinary.new({ cloud_name: "asista-dabcar" });
-cl.responsive();
+// const cl = cloudinary.Cloudinary.new({ cloud_name: "asista-dabcar" })
+// cl.responsive()

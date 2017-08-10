@@ -42,7 +42,8 @@
   color: rgba(#fff, .6);
 }
 
-.t-typo * + *:not(div):not(.o-grid):not(footer) {
+.t-typo * + *:not(div):not(.o-grid):not(footer),
+.t-typo * + div.table-wrapper {
   margin-top: rem(25px);
 }
 

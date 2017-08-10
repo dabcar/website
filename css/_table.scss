@@ -1,3 +1,10 @@
+.table-wrapper {
+  max-width: calc(80vw);
+  padding: 1px;
+  overflow-x: auto;
+  overflow-y: hidden;
+}
+
 .table {
   font-size: rem(16px);
   line-height: 1.5;

@@ -7,8 +7,6 @@
   <meta name="description" content="">
   <title>Dąbcar</title>
   <link rel="stylesheet" href="style.css">
-  <!-- <link rel="stylesheet" href="https://unpkg.com/photoswipe@4.1.1/dist/photoswipe.css">
-  <link rel="stylesheet" href="https://unpkg.com/photoswipe@4.1.1/dist/default-skin/default-skin.css"> -->
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat:400,700&amp;subset=latin-ext">
 </head>
 
@@ -94,7 +92,7 @@
 
   <main>
     <section id="witamy" class="o-section section--01 t-typo t-inverse">
-      <img class="section--01__bgi cld-responsive" data-src="https://res.cloudinary.com/asista-dabcar/image/upload/w_1200/wstep-01.jpg"
+      <img class="section--01__bgi cld-responsive" src="https://res.cloudinary.com/asista-dabcar/image/upload/w_1200/wstep-01.jpg"
         alt="Nasz bus">
       <div class="section--01__circle"></div>
       <div class="section--01__content o-container">
@@ -133,7 +131,7 @@
           <div>
             <a href="#" target="_blank" rel="noopener">
               <figure class="dest">
-                <img class="dest__img cld-responsive" data-src="https://res.cloudinary.com/asista-dabcar/image/upload/w_400,h_400/wstep-01.jpg"
+                <img class="dest__img cld-responsive" src="https://res.cloudinary.com/asista-dabcar/image/upload/w_400,h_400/wstep-01.jpg"
                   alt="Nasz bus">
                 <figcaption class="dest__caption">Aquapark Istebna</figcaption>
               </figure>
@@ -142,7 +140,7 @@
           <div>
             <a href="#" target="_blank" rel="noopener">
               <figure class="dest">
-                <img class="dest__img cld-responsive" data-src="https://res.cloudinary.com/asista-dabcar/image/upload/w_400,h_400/wstep-01.jpg"
+                <img class="dest__img cld-responsive" src="https://res.cloudinary.com/asista-dabcar/image/upload/w_400,h_400/wstep-01.jpg"
                   alt="Nasz bus">
                 <figcaption class="dest__caption">Białka Tatrzańska</figcaption>
               </figure>
@@ -151,7 +149,7 @@
           <div>
             <a href="#" target="_blank" rel="noopener">
               <figure class="dest">
-                <img class="dest__img cld-responsive" data-src="https://res.cloudinary.com/asista-dabcar/image/upload/w_400,h_400/wstep-01.jpg"
+                <img class="dest__img cld-responsive" src="https://res.cloudinary.com/asista-dabcar/image/upload/w_400,h_400/wstep-01.jpg"
                   alt="Nasz bus">
                 <figcaption class="dest__caption">Termy Szaflary</figcaption>
               </figure>
@@ -160,7 +158,7 @@
           <div>
             <a href="#" target="_blank" rel="noopener">
               <figure class="dest">
-                <img class="dest__img cld-responsive" data-src="https://res.cloudinary.com/asista-dabcar/image/upload/w_400,h_400/wstep-01.jpg"
+                <img class="dest__img cld-responsive" src="https://res.cloudinary.com/asista-dabcar/image/upload/w_400,h_400/wstep-01.jpg"
                   alt="Nasz bus">
                 <figcaption class="dest__caption">Termy Cieplickie</figcaption>
               </figure>
@@ -169,7 +167,7 @@
           <div>
             <a href="#" target="_blank" rel="noopener">
               <figure class="dest">
-                <img class="dest__img cld-responsive" data-src="https://res.cloudinary.com/asista-dabcar/image/upload/w_400,h_400/wstep-01.jpg"
+                <img class="dest__img cld-responsive" src="https://res.cloudinary.com/asista-dabcar/image/upload/w_400,h_400/wstep-01.jpg"
                   alt="Nasz bus">
                 <figcaption class="dest__caption">Termy Uniejów</figcaption>
               </figure>
@@ -178,7 +176,7 @@
           <div>
             <a href="#" target="_blank" rel="noopener">
               <figure class="dest">
-                <img class="dest__img cld-responsive" data-src="https://res.cloudinary.com/asista-dabcar/image/upload/w_400,h_400/wstep-01.jpg"
+                <img class="dest__img cld-responsive" src="https://res.cloudinary.com/asista-dabcar/image/upload/w_400,h_400/wstep-01.jpg"
                   alt="Nasz bus">
                 <figcaption class="dest__caption">Kopalnia Soli „Wieliczka”</figcaption>
               </figure>
@@ -277,18 +275,20 @@
         </ul>
         <p>Nasi kierowcy zapewnią Państwu bezpieczną i&nbsp;komfortową podróż.</p>
         <p class="bold u-space--top">Wycenę usługi szacujemy wg poniższych parametrów:</p>
-        <table class="table">
-          <tbody>
-            <tr>
-              <th>Stawka za każdy kilometr:</th>
-              <td class="table__val">0,95 zł</td>
-            </tr>
-            <tr>
-              <th>Stawka za każdą rozpoczętą godzinę postoju:</th>
-              <td class="table__val">12,00 zł</td>
-            </tr>
-          </tbody>
-        </table>
+        <div class="table-wrapper">
+          <table class="table" style="width: 500px;">
+            <tbody>
+              <tr>
+                <th>Stawka za każdy kilometr:</th>
+                <td class="table__val">0,95 zł</td>
+              </tr>
+              <tr>
+                <th>Stawka za każdą rozpoczętą godzinę postoju:</th>
+                <td class="table__val">12,00 zł</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
       </div>
       <footer class="cta">
         <p class="typo__subtitle">Zapytaj, czy są wolne miejsca</p>
@@ -368,18 +368,20 @@
         </ul>
         <p>Istnieje możliwość doprowadzenia lub odprowadzenia samochodu klienta.</p>
         <p class="bold u-space--top">Wycenę usługi szacujemy wg poniższych parametrów (na przykładzie obsługi wesela):</p>
-        <table class="table">
-          <tbody>
-            <tr>
-              <th>Stawka za każdy kilometr:</th>
-              <td class="table__val">0,50 zł</td>
-            </tr>
-            <tr>
-              <th>Cena:</th>
-              <td class="table__val">250,00 zł</td>
-            </tr>
-          </tbody>
-        </table>
+        <div class="table-wrapper">
+          <table class="table" style="width: 500px;">
+            <tbody>
+              <tr>
+                <th>Stawka za każdy kilometr:</th>
+                <td class="table__val">0,50 zł</td>
+              </tr>
+              <tr>
+                <th>Cena:</th>
+                <td class="table__val">250,00 zł</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
       </div>
       <footer class="cta">
         <p class="typo__subtitle">Zapytaj, czy są wolne miejsca</p>
@@ -403,14 +405,16 @@
           powodu nie mogą samodzielnie prowadzić pojazdu. Jeżeli zabrakło Państwu etatowego kierowcy z&nbsp;powodów zdrowotnych
           lub organizacyjnych, to ta oferta jest właśnie dla Państwa.</p>
         <p class="bold u-space--top">Wycenę usługi szacujemy wg poniższych parametrów:</p>
-        <table class="table">
-          <tbody>
-            <tr>
-              <th>Stawka za każdą rozpoczętą godzinę:</th>
-              <td class="table__val">18,00 zł</td>
-            </tr>
-          </tbody>
-        </table>
+        <div class="table-wrapper">
+          <table class="table" style="width: 500px;">
+            <tbody>
+              <tr>
+                <th>Stawka za każdą rozpoczętą godzinę:</th>
+                <td class="table__val">18,00 zł</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
       </div>
       <footer class="cta">
         <p class="typo__subtitle">Zapytaj, czy są wolne miejsca</p>
@@ -480,76 +484,78 @@
         </ul>
 
         <p class="bold u-space--top">Gdzie jeździmy</p>
-        <table class="table table--fixed">
-          <thead>
-            <th>Lotnisko</th>
-            <th>Szacowana długość trasy z/do Opola</th>
-            <th>Szacowany czas przejazdu z/do Opola</th>
-            <th>Cena przejazdu jednej osoby</th>
-          </thead>
-          <tbody>
-            <tr>
-              <th>Pyrzowice</th>
-              <td>126 km</td>
-              <td>1g 30 m</td>
-              <td class="table__val">250 zł</td>
-            </tr>
-            <tr>
-              <th>Balice</th>
-              <td>177 km</td>
-              <td>2g 10 m</td>
-              <td class="table__val">300 zł</td>
-            </tr>
-            <tr>
-              <th>Wrocław</th>
-              <td>110 km</td>
-              <td>1g 20 m</td>
-              <td class="table__val">230 zł</td>
-            </tr>
-            <tr>
-              <th>Warszawa</th>
-              <td>340 km</td>
-              <td>4g 15 m</td>
-              <td class="table__val">390 zł</td>
-            </tr>
-            <tr>
-              <th>Praga</th>
-              <td>330 km</td>
-              <td>4g 50 m</td>
-              <td class="table__val">420 zł</td>
-            </tr>
-            <tr>
-              <th>Berlin</th>
-              <td>400 km</td>
-              <td>4g 30 m</td>
-              <td class="table__val">420 zł</td>
-            </tr>
-            <tr>
-              <th>Hamburg</th>
-              <td>715 km</td>
-              <td>7g 40 m</td>
-              <td class="table__val">590 zł</td>
-            </tr>
-            <tr>
-              <th>Monachium</th>
-              <td>790 km</td>
-              <td>7g 20 m</td>
-              <td class="table__val">650 zł</td>
-            </tr>
-            <tr>
-              <th>Frankfurt</th>
-              <td>810 km</td>
-              <td>7g 40 m</td>
-              <td class="table__val">670 zł</td>
-            </tr>
-            <tr>
-              <th>Frankfurt – Hahn</th>
-              <td>950 km</td>
-              <td>8g 50 m</td>
-              <td class="table__val">690 zł</td>
-            </tr>
-          </tbody>
-        </table>
+        <div class="table-wrapper">
+          <table class="table table--fixed" style="min-width: 600px;">
+            <thead>
+              <th>Lotnisko</th>
+              <th>Szacowana długość trasy z/do Opola</th>
+              <th>Szacowany czas przejazdu z/do Opola</th>
+              <th>Cena przejazdu jednej osoby</th>
+            </thead>
+            <tbody>
+              <tr>
+                <th>Pyrzowice</th>
+                <td>126 km</td>
+                <td>1g 30 m</td>
+                <td class="table__val">250 zł</td>
+              </tr>
+              <tr>
+                <th>Balice</th>
+                <td>177 km</td>
+                <td>2g 10 m</td>
+                <td class="table__val">300 zł</td>
+              </tr>
+              <tr>
+                <th>Wrocław</th>
+                <td>110 km</td>
+                <td>1g 20 m</td>
+                <td class="table__val">230 zł</td>
+              </tr>
+              <tr>
+                <th>Warszawa</th>
+                <td>340 km</td>
+                <td>4g 15 m</td>
+                <td class="table__val">390 zł</td>
+              </tr>
+              <tr>
+                <th>Praga</th>
+                <td>330 km</td>
+                <td>4g 50 m</td>
+                <td class="table__val">420 zł</td>
+              </tr>
+              <tr>
+                <th>Berlin</th>
+                <td>400 km</td>
+                <td>4g 30 m</td>
+                <td class="table__val">420 zł</td>
+              </tr>
+              <tr>
+                <th>Hamburg</th>
+                <td>715 km</td>
+                <td>7g 40 m</td>
+                <td class="table__val">590 zł</td>
+              </tr>
+              <tr>
+                <th>Monachium</th>
+                <td>790 km</td>
+                <td>7g 20 m</td>
+                <td class="table__val">650 zł</td>
+              </tr>
+              <tr>
+                <th>Frankfurt</th>
+                <td>810 km</td>
+                <td>7g 40 m</td>
+                <td class="table__val">670 zł</td>
+              </tr>
+              <tr>
+                <th>Frankfurt – Hahn</th>
+                <td>950 km</td>
+                <td>8g 50 m</td>
+                <td class="table__val">690 zł</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
       </div>
       <footer class="cta">
         <p class="typo__subtitle">Zapytaj, czy są wolne miejsca</p>
@@ -575,82 +581,88 @@
         <p>Wypożyczalnia mieści się na parkingu strzeżonym Dąbcar, w&nbsp;Opolu, przy ulicy Grota Roweckiego 11a</p>
 
         <p class="bold u-space--top">Cennik:</p>
-        <table class="table">
-          <thead>
-            <th>Przyczepa 1-osiowa</th>
-            <th>bez plandeki</th>
-            <th>z plandeką</th>
-          </thead>
-          <tbody>
-            <tr>
-              <th>Do 4 godzin</th>
-              <td class="table__val">19 zł</td>
-              <td class="table__val">23 zł</td>
-            </tr>
-            <tr>
-              <th>Doba</th>
-              <td class="table__val">35 zł</td>
-              <td class="table__val">42 zł</td>
-            </tr>
-            <tr>
-              <th>Weekend</th>
-              <td class="table__val">50 zł</td>
-              <td class="table__val">60 zł</td>
-            </tr>
-            <tr>
-              <th>Pn – Pt</th>
-              <td class="table__val">120 zł</td>
-              <td class="table__val">145 zł</td>
-            </tr>
-            <tr>
-              <th>Kaucja zwrotna</th>
-              <td class="table__val" colspan="2">200 zł</td>
-            </tr>
-          </tbody>
-        </table>
+        <div class="table-wrapper">
+          <table class="table" style="width: 500px;">
+            <thead>
+              <th style="width: 200px;">Przyczepa 1-osiowa</th>
+              <th>bez plandeki</th>
+              <th>z plandeką</th>
+            </thead>
+            <tbody>
+              <tr>
+                <th>Do 4 godzin</th>
+                <td class="table__val">19 zł</td>
+                <td class="table__val">23 zł</td>
+              </tr>
+              <tr>
+                <th>Doba</th>
+                <td class="table__val">35 zł</td>
+                <td class="table__val">42 zł</td>
+              </tr>
+              <tr>
+                <th>Weekend</th>
+                <td class="table__val">50 zł</td>
+                <td class="table__val">60 zł</td>
+              </tr>
+              <tr>
+                <th>Pn – Pt</th>
+                <td class="table__val">120 zł</td>
+                <td class="table__val">145 zł</td>
+              </tr>
+              <tr>
+                <th>Kaucja zwrotna</th>
+                <td class="table__val" colspan="2">200 zł</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
 
-        <table class="table">
-          <thead>
-            <th>Przyczepa 2-osiowa</th>
-            <th>bez plandeki</th>
-            <th>z plandeką</th>
-          </thead>
-          <tbody>
-            <tr>
-              <th>Do 4 godzin</th>
-              <td class="table__val">24 zł</td>
-              <td class="table__val">29 zł</td>
-            </tr>
-            <tr>
-              <th>Doba</th>
-              <td class="table__val">39 zł</td>
-              <td class="table__val">47 zł</td>
-            </tr>
-            <tr>
-              <th>Weekend</th>
-              <td class="table__val">65 zł</td>
-              <td class="table__val">78 zł</td>
-            </tr>
-            <tr>
-              <th>Pn – Pt</th>
-              <td class="table__val">140 zł</td>
-              <td class="table__val">168 zł</td>
-            </tr>
-            <tr>
-              <th>Kaucja zwrotna</th>
-              <td class="table__val" colspan="2">300 zł</td>
-            </tr>
-          </tbody>
-        </table>
+        <div class="table-wrapper">
+          <table class="table" style="width: 500px;">
+            <thead>
+              <th style="width: 200px;">Przyczepa 2-osiowa</th>
+              <th>bez plandeki</th>
+              <th>z plandeką</th>
+            </thead>
+            <tbody>
+              <tr>
+                <th>Do 4 godzin</th>
+                <td class="table__val">24 zł</td>
+                <td class="table__val">29 zł</td>
+              </tr>
+              <tr>
+                <th>Doba</th>
+                <td class="table__val">39 zł</td>
+                <td class="table__val">47 zł</td>
+              </tr>
+              <tr>
+                <th>Weekend</th>
+                <td class="table__val">65 zł</td>
+                <td class="table__val">78 zł</td>
+              </tr>
+              <tr>
+                <th>Pn – Pt</th>
+                <td class="table__val">140 zł</td>
+                <td class="table__val">168 zł</td>
+              </tr>
+              <tr>
+                <th>Kaucja zwrotna</th>
+                <td class="table__val" colspan="2">300 zł</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
 
-        <table class="table">
-          <tbody>
-            <tr>
-              <th>Pasy transportowe</th>
-              <td class="table__val">+ 5 zł/szt.</td>
-            </tr>
-          </tbody>
-        </table>
+        <div class="table-wrapper">
+          <table class="table" style="width: 500px;">
+            <tbody>
+              <tr>
+                <th style="width: 200px;">Pasy transportowe</th>
+                <td class="table__val">+ 5 zł/szt.</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
       </div>
       <footer class="cta">
         <p class="typo__subtitle">Zapytaj, czy są wolne miejsca</p>
@@ -685,22 +697,24 @@
           <div class="o-grid o-grid--2 u-align-middle">
             <div>
               <p class="bold">Za korzystanie z&nbsp;miejsc<br> parkingowych mogą Państwo<br> rozliczać się z&nbsp;nami:</p>
-              <table class="table">
-                <tbody>
-                  <tr>
-                    <th>godzinowo</th>
-                    <td class="table__val">2 zł/godzina</td>
-                  </tr>
-                  <tr>
-                    <th>dobowo</th>
-                    <td class="table__val">15 zł/doba</td>
-                  </tr>
-                  <tr>
-                    <th>miesięcznie</th>
-                    <td class="table__val">145 zł/miesiąc</td>
-                  </tr>
-                </tbody>
-              </table>
+              <div class="table-wrapper">
+                <table class="table">
+                  <tbody>
+                    <tr>
+                      <th>godzinowo</th>
+                      <td class="table__val" style="text-align: left;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;2 zł/godzina</td>
+                    </tr>
+                    <tr>
+                      <th>dobowo</th>
+                      <td class="table__val" style="text-align: left;">&nbsp;&nbsp;&nbsp;15 zł/doba</td>
+                    </tr>
+                    <tr>
+                      <th>miesięcznie</th>
+                      <td class="table__val" style="text-align: left;">145 zł/miesiąc</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
             </div>
             <div>
               <a href="https://www.google.com/maps/place/Całodobowy+Parking+Strzeżony+opole+grota+roweckiego/" target="_blank" rel="noopener">
@@ -720,11 +734,7 @@
     </section>
   </main>
 
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/cloudinary-core/2.2.1/cloudinary-core-shrinkwrap.min.js" defer></script>
   <script src="https://unpkg.com/smoothscroll-polyfill@0.3.5/dist/smoothscroll.js" defer></script>
-  <!-- <script src="https://unpkg.com/photoswipe@4.1.1/dist/photoswipe.min.js" defer></script> -->
-  <!-- <script src="https://unpkg.com/photoswipe@4.1.1/dist/photoswipe-ui-default.min.js" defer></script> -->
-  <!-- <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCalpCD21EPjoxyrd19CkL9_-HZgKiTMNI&callback=initMap" defer></script> -->
   <script src="script-compiled.js" defer></script>
 </body>
 
