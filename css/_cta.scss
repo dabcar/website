@@ -5,7 +5,10 @@
     flex-direction: row;
   }
   align-items: baseline;
-  padding: $space--y 7%;
+  padding: rem(40px) 7%;
+  @include min(tabletL) {
+    padding: $space--y 7%;
+  }
   background-color: #eee;
 }
 

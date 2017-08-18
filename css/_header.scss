@@ -6,7 +6,7 @@
   display: none;
   width: 100%;
 
-  @include min(850px) {
+  @include min(tabletL) {
     display: block;
   }
 }
@@ -14,10 +14,10 @@
 .header__content {
   display: flex;
   align-items: center;
-  height: rem(300px);
+  padding: rem(40px);
   background-color: $primary;
 
-  @include min(850px) {
+  @include min(tabletL) {
     min-height: rem(160px);
     height: 90%;
     position: absolute;
